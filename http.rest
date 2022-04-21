@@ -11,5 +11,19 @@ Content-Type: application/json
     "price": "1.99"
 }
 
+
+###
+GET http://localhost:3100/api/users
 ###
 DELETE http://localhost:3100/api/services/6261027724d902caea878f94
+
+###
+POST http://localhost:3100/api/users
+Content-Type: application/json
+
+{
+    "email": "labas@krabas.lt",
+    "name": "labas",
+    "surname": "krabas",
+    "service_id": "1.99"
+}

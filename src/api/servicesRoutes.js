@@ -27,7 +27,7 @@ servicesRoutes.post('/services', async (req, res) => {
     await dbClient.connect();
     console.log('connected');
     // paimti gautus duomenis
-    console.log('req.body ===', req.body);
+    console.log('new service ===', req.body);
     const newServiceObj = req.body;
     // su jais sukurti nauja servisa
     const collection = dbClient.db('memberships11').collection('services');
