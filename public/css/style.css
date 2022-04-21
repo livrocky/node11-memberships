@@ -23,7 +23,7 @@ main {
   text-align: center;
 }
 a {
-  padding: 0px 40px 0px 40px;
+  padding: 0px 10px 0px 10px;
 }
 
 .membership-btn {
@@ -50,7 +50,7 @@ a {
   line-height: 1.4;
   max-width: 1000px;
   margin: 20px auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px;
   background-color: white;
   text-align: center;
 }
@@ -73,4 +73,41 @@ textarea {
 
 .add-buttons {
   margin-top: 30px;
+  text-align: center;
+}
+
+/* ADD USER */
+
+.userEmailInput {
+  width: 47.5%;
+}
+
+.select-input {
+  width: 25%;
+}
+
+.add-user-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.add-user-container {
+  line-height: 1.4;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  text-align: left;
+}
+
+.userNameInput {
+  width: 95%;
+}
+
+.userLnameInput {
+  width: 95%;
+}
+
+span {
+  color: red;
 }

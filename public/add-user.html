@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/services.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">Memberships</a>
+        <a href="/">Users</a>
+    </header>
+    <main>
+        <div class="management">
+            <h1>Create User</h1>
+        </div>
+        <div class="add-user-container">
+            <form>
+                <div class="add-user-inputs">
+                    <div>
+                        <b><label for="name">First Name <span>*</span></label></b><br>
+                        <input class="userNameInput" type="text" name="name" id="name" placeholder="First Name">
+                    </div>
+                    <div>
+                        <b><label for="lname">Last Name <span>*</span> </label></b><br>
+                        <input class="userLnameInput" type="text" name="lname" id="lname" placeholder="Last Name">
+                    </div>
+                </div>
+                <b><label for="email">Email Address <span>*</span> </label></b><br>
+                <input class="userEmailInput" type="text" name="email" id="email" placeholder="Email Address"><br>
+
+                <b><label for="memberships">Change Membership</label></b><br>
+                <select class="select-input" name="memberships" id="memberships">
+                    <option value="platinum">Platinum</option>
+                    <option value="basic">Basic</option>
+                    <option value="trial">Trial</option>
+                </select><br>
+                <div class="add-buttons">
+                    <a class="cancel-btn" href="index.html">Cancel</a>
+                    <button class="membership-btn">New User</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
