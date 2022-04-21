@@ -1,1 +1,12 @@
-GET http://localhost:3000/api/users
+###
+GET http://localhost:3100/api/services
+
+###
+POST http://localhost:3100/api/services
+Content-Type: application/json
+
+{
+    "description": "very good membership",
+    "name": "very nice",
+    "price": "1.99"
+}
