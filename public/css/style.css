@@ -1,0 +1,76 @@
+@import url(reset.css);
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* .container {
+  max-width: 470px;
+  margin: 150px auto;
+  padding: 20px 20px;
+  background-color: white;
+} */
+
+main {
+  line-height: 1.4;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.header {
+  background-color: white;
+  max-width: 100%;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+}
+a {
+  padding: 0px 40px 0px 40px;
+}
+
+.membership-btn {
+  background-color: rgb(103, 124, 236);
+  color: white;
+  padding: 0px 30px 0px 30px;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.management {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ADD MEMBERSHIP */
+
+.container {
+  line-height: 1.4;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+  text-align: center;
+}
+
+input {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 60%;
+}
+
+.cancel-btn {
+  border: none;
+  background-color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.add-buttons {
+  margin-top: 30px;
+}

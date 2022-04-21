@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/services.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">Memberships</a>
+        <a href="/">Users</a>
+    </header>
+    <main>
+        <div class="management">
+            <h1>Create Membership</h1>
+        </div>
+        <div class="container">
+            <form>
+                <b><label for="name">Name</label></b>
+                <input type="text" name="name" id="name" placeholder="Name"><br>
+                <b><label for="price">Membership Price</label></b>
+                <input type="number" name="price" id="price" placeholder="Membership Price"><br>
+                <b><label for="description">Description</label></b>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+                <div class="add-buttons">
+                    <a class="cancel-btn" href="index.html">Cancel</a>
+                    <button class="membership-btn">New Membership</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
