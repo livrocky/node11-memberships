@@ -1,4 +1,5 @@
 const express = require('express');
+const { ObjectId } = require('mongodb');
 const { dbClient } = require('../config');
 
 const servicesRoutes = express.Router();
@@ -34,6 +35,23 @@ servicesRoutes.post('/services', async (req, res) => {
     res.status(201).json(insertResult);
   } catch (error) {
     console.error('error in creating a service', error);
+    res.status(500).json('something is wrong');
+  } finally {
+    // uzdaryti prisijungima
+    await dbClient.close();
+  }
+});
+
+servicesRoutes.delete('/services/:delServiceId', async (req, res) => {
+  try {
+    const { delServiceId } = req.params;
+    await dbClient.connect();
+    const collection = dbClient.db('memberships11').collection('services');
+    const deleteResult = await collection.deleteOne({ _id: ObjectId(delServiceId) });
+    console.log('deleteResult ===', deleteResult);
+    res.status(200).json(deleteResult);
+  } catch (error) {
+    console.error('error in deleting a service', error);
     res.status(500).json('something is wrong');
   } finally {
     // uzdaryti prisijungima

@@ -10,3 +10,6 @@ Content-Type: application/json
     "name": "very nice",
     "price": "1.99"
 }
+
+###
+DELETE http://localhost:3100/api/services/6261027724d902caea878f94
