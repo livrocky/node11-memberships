@@ -37,6 +37,29 @@ a {
   justify-content: space-between;
 }
 
+.membership-card {
+  background-color: white;
+  line-height: 2;
+  padding: 20px;
+  width: 32%;
+  text-align: center;
+  /* SHADOW */
+  box-shadow: 5px 10px 18px #dad5d5;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.fa-trash {
+  color: red;
+}
+
+.trash-icon {
+  text-align: right;
+  cursor: pointer;
+}
+
 /* ADD MEMBERSHIP */
 
 .add-membership-container {
@@ -46,6 +69,8 @@ a {
   padding: 20px 280px 20px 20px;
   background-color: white;
   text-align: center;
+  /* SHADOW */
+  box-shadow: 5px 10px 18px #dad5d5;
 }
 
 .membership-content {
@@ -129,4 +154,33 @@ span {
 .add-buttons-user {
   margin-top: 30px;
   text-align: center;
+}
+
+/* USER */
+
+.sort {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  background-color: white;
+  line-height: 2;
+  padding: 20px;
+  width: 32%;
+  /* SHADOW */
+  box-shadow: 5px 10px 18px #dad5d5;
+}
+
+.cards-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.name {
+  padding-bottom: 20px;
+  color: rgb(185, 195, 205);
+  font-weight: 700;
 }
