@@ -1,6 +1,4 @@
-/* eslint-disable no-use-before-define */
-// eslint-disable-next-line import/extensions
-import { createCard } from './modules/html.js';
+import { renderCards } from './modules/html.js';
 
 const BASE_URL = 'http://localhost:3100/api';
 console.log('sevices.js');
@@ -24,13 +22,5 @@ async function getServices() {
     console.log('atvaizduojam klaida');
   }
 }
-
-function renderCards(cardArr, dest) {
-  // isvalyti dest kad neliktu pries tai buvusiu korteliu
-  // sukti cikla ir irasyti visas gautas korteles
-  const card = createCard(cardArr[0]);
-  dest.append(card);
-}
-//
 
 getServices();

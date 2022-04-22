@@ -42,6 +42,7 @@ servicesRoutes.post('/services', async (req, res) => {
   }
 });
 
+//DELETE /api/services/:serId - tuecias routes kuris grazina serId
 servicesRoutes.delete('/services/:delServiceId', async (req, res) => {
   try {
     const { delServiceId } = req.params;
@@ -49,12 +50,20 @@ servicesRoutes.delete('/services/:delServiceId', async (req, res) => {
     const collection = dbClient.db('memberships11').collection('services');
     const deleteResult = await collection.deleteOne({ _id: ObjectId(delServiceId) });
     console.log('deleteResult ===', deleteResult);
-    res.status(200).json(deleteResult);
+    // isitikinti kad is tikro buvo istrinta
+    if (deleteRezult.deletedCount === 1) {
+      res.status(200).json({ success: true });
+      return;
+    }
+    if (deleteRezult.deletedCount === 0) {
+      res.status(400).json({ err: 'no thing was deleted' });
+      return;
+    }
+    res.status(500).json('something is wrong');
   } catch (error) {
-    console.error('error in deleting a service', error);
+    console.error('error in delete user', error);
     res.status(500).json('something is wrong');
   } finally {
-    // uzdaryti prisijungima
     await dbClient.close();
   }
 });

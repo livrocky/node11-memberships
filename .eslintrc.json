@@ -13,6 +13,8 @@
     },
     "rules": {
         "no-console": "off",
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "no-param-reassign": 0,
+        "import/extensions": ["never"]
     }
 }
