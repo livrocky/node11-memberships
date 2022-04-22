@@ -48,8 +48,8 @@ servicesRoutes.delete('/services/:delServiceId', async (req, res) => {
     const { delServiceId } = req.params;
     await dbClient.connect();
     const collection = dbClient.db('memberships11').collection('services');
-    const deleteResult = await collection.deleteOne({ _id: ObjectId(delServiceId) });
-    console.log('deleteResult ===', deleteResult);
+    const deleteRezult = await collection.deleteOne({ _id: ObjectId(delServiceId) });
+    console.log('deleteResult ===', deleteRezult);
     // isitikinti kad is tikro buvo istrinta
     if (deleteRezult.deletedCount === 1) {
       res.status(200).json({ success: true });
