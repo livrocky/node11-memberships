@@ -1,6 +1,8 @@
 const BASE_URL = 'http://localhost:3100/api';
 console.log('services.js');
 
+// GET
+
 async function getServices() {
   try {
     const resp = await fetch(`${BASE_URL}/services`);
