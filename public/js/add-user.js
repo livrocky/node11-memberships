@@ -7,6 +7,7 @@ const nameEl = document.getElementById('name');
 const surnameEl = document.getElementById('surname');
 const emailEl = document.getElementById('email');
 const service_idEl = document.getElementById('service_id');
+const membershipEl = document.getElementById('membership');
 
 // nusitaikyti i forma
 const formEl = document.forms[0];
@@ -17,6 +18,7 @@ formEl.addEventListener('submit', (e) => {
     name: nameEl.value,
     surname: surnameEl.value,
     email: emailEl.value,
+    membership: membershipEl.value,
     service_id: service_idEl.value,
   };
   console.log('newUserObj ===', newUserObj);
