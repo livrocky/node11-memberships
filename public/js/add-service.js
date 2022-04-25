@@ -2,6 +2,13 @@ import { BASE_URL } from './modules/config.js';
 
 console.log('add service');
 
+// back button //
+const backBtn = document.querySelector('.btn');
+console.log('backBtn===', backBtn);
+backBtn.addEventListener('click', () => {
+  window.location.href = 'user.html';
+});
+
 const nameEl = document.getElementById('name');
 const priceEl = document.getElementById('price');
 const descriptionEl = document.getElementById('description');

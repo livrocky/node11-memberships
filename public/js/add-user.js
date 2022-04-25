@@ -2,6 +2,13 @@ import { BASE_URL } from './modules/config.js';
 
 console.log('add user');
 
+// back button //
+const backBtn = document.querySelector('.btn');
+console.log('backBtn===', backBtn);
+backBtn.addEventListener('click', () => {
+  window.location.href = 'user.html';
+});
+
 // pasigauti visus input el
 const nameEl = document.getElementById('name');
 const surnameEl = document.getElementById('surname');
