@@ -10,7 +10,7 @@ servicesRoutes.get('/services', async (req, res) => {
   try {
     await dbClient.connect();
 
-    const coll = dbClient.db('membership11').collection('services');
+    const coll = dbClient.db('memberships11').collection('services');
     // aggreguoti su useriais
     const agg = [
       {
@@ -49,7 +49,7 @@ servicesRoutes.post('/services', async (req, res) => {
     /// validation
     await dbClient.connect();
 
-    const coll = dbClient.db('membership11').collection('services');
+    const coll = dbClient.db('memberships11').collection('services');
     const insertRezult = await coll.insertOne(newServiceObj);
     if (insertRezult.insertedId) {
       console.log('insert ok');
@@ -76,7 +76,7 @@ servicesRoutes.delete('/services/:serId', async (req, res) => {
     // pasitikrinti ar service turi useriu.
     // jei turi netrinam ir apie tai pranesam
 
-    const coll = dbClient.db('membership11').collection('services');
+    const coll = dbClient.db('memberships11').collection('services');
     const deleteRezult = await coll.deleteOne({ _id: mongoObjId });
     // isitikinti kad istikro buvi istrinta
     if (deleteRezult.deletedCount === 1) {

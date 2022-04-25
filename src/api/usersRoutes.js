@@ -9,7 +9,7 @@ userRoutes.get('/users', async (req, res) => {
   try {
     await dbClient.connect();
 
-    const coll = dbClient.db('membership11').collection('users');
+    const coll = dbClient.db('memberships11').collection('users');
 
     const allArr = await coll.find().toArray();
     res.json(allArr);
@@ -30,7 +30,7 @@ userRoutes.post('/users', async (req, res) => {
     /// validation
     await dbClient.connect();
 
-    const coll = dbClient.db('membership11').collection('users');
+    const coll = dbClient.db('memberships11').collection('users');
     const insertRezult = await coll.insertOne(newUserObj);
     if (insertRezult.insertedId) {
       console.log('insert ok');
