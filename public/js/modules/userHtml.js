@@ -12,8 +12,9 @@ export function createCard(newCardObj) {
 
   articleEl.className = 'card';
   makeEl('p', `${newCardObj.name} ${newCardObj.surname}`, articleEl);
-  makeEl('p', `${newCardObj.email}`, articleEl);
-  makeEl('p', `${newCardObj.membership}`, articleEl);
+  makeEl('p', `Email Address: ${newCardObj.email}`, articleEl);
+  makeEl('p', `Membership:${newCardObj.membership}`, articleEl);
+  makeEl('p', `ip:78.20.42.19`, articleEl);
 
   // console.log('articleEl ===', articleEl);
   return articleEl;

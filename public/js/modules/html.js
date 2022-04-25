@@ -17,7 +17,7 @@ function makeEl(tagName, text, dest, elClass = null) {
 export function createCard(newCardObj) {
   const articleEl = document.createElement('article');
 
-  articleEl.className = 'card';
+  articleEl.className = 'card-service';
   makeEl('h3', `${newCardObj.price}eur ${newCardObj.name}`, articleEl);
   makeEl('p', newCardObj.description, articleEl);
   makeEl('div', '', articleEl, 'hr');

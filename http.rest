@@ -23,7 +23,7 @@ Content-Type: application/json
 
 {
     "email": "labas@krabas.lt",
-    "name": "labas",
+    "name": "Rokas",
     "surname": "krabas",
     "service_id": "1.99"
 }
