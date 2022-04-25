@@ -1,10 +1,14 @@
+import { BASE_URL } from './modules/config.js';
 import { renderCards } from './modules/html.js';
 
-const BASE_URL = 'http://localhost:3100/api';
 console.log('sevices.js');
 
 const cardContainerEl = document.querySelector('.cards-container');
 const addBntEl = document.querySelector('.btn-add');
+
+addBntEl.addEventListener('click', () => {
+  window.location.href = 'add-service.html';
+});
 
 async function getServices() {
   try {
